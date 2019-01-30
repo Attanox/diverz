@@ -1,1 +1,1 @@
-# diverz.github.io
+# https://diverz.github.io
