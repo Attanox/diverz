@@ -68,7 +68,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .header--heading > * {
-    width: 50%; } }
+    width: 50%; }
+  .header .nav .logo {
+    width: 7rem;
+    top: 1rem;
+    left: 1rem; } }
 
 @media screen and (max-width: 992px) {
   .header--heading {
@@ -179,3 +183,17 @@ body {
 .navigation--checkbox:checked + .navigation--button .navigation--icon::after {
   top: 0;
   transform: rotate(-45deg); }
+
+@media screen and (max-width: 768px) {
+  .navigation--button {
+    width: 4rem;
+    height: 4rem;
+    top: 1rem;
+    right: 1rem; }
+  .navigation--background {
+    width: 3rem;
+    height: 3rem;
+    top: 1.5rem;
+    right: 1.5rem; }
+  .navigation--icon {
+    margin-top: 2rem; } }
