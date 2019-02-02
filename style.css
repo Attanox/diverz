@@ -80,6 +80,11 @@ body {
     width: 100%;
     margin: 0; } }
 
+@media screen and (max-width: 480px) {
+  .about--center__heading {
+    font-size: 1.7rem;
+    margin-bottom: 1rem; } }
+
 .footer {
   background-color: #333;
   width: 100%;
@@ -332,6 +337,10 @@ body {
   .product--center__showroom > * {
     width: 100%;
     margin-bottom: 2rem; } }
+
+@media screen and (max-width: 480px) {
+  .product--center__heading {
+    font-size: 1.7rem; } }
 
 .meet {
   width: 100%;
