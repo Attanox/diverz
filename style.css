@@ -375,8 +375,7 @@ body {
         .meet--center__team__members > p {
           font-size: 1.2rem;
           font-weight: 300;
-          text-align: justify;
-          text-justify: inter-word; }
+          text-align: center; }
 
 @media screen and (max-width: 992px) {
   .meet--center__team__members {
@@ -393,3 +392,7 @@ body {
 @media screen and (max-width: 768px) {
   .meet--center__team__members > p {
     width: 100%; } }
+
+@media screen and (max-width: 480px) {
+  .meet--center__heading {
+    font-size: 1.7rem; } }
