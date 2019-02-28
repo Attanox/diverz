@@ -29,22 +29,22 @@
 <body>
     <div class="navigation">
         <input type="checkbox" class="navigation--checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation--button">
+        <label for="navi-toggle" class="navigation--button" ontouchend="this.onclick=fix">
             <span class="navigation--icon">&nbsp;</span>
         </label>
         <div class="navigation--background">&nbsp;</div>
 
         <div class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">HOME</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">ABOUT</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">PRODUCT</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">CONTACT</a></li>
+                <li class="navigation__item"><a href="#home" class="navigation__link" ontouchend="this.onclick=fix">HOME</a></li>
+                <li class="navigation__item"><a href="#product" class="navigation__link" ontouchend="this.onclick=fix">PRODUCT</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link" ontouchend="this.onclick=fix">ABOUT</a></li>
+                <li class="navigation__item"><a href="#team" class="navigation__link" ontouchend="this.onclick=fix">TEAM</a></li>
             </ul>
         </div>
     </div>
 
-    <header class="header">
+    <header class="header" id="home">
         <nav class="nav">
             <div class="logo"><img src="img/triangle.png" alt="logo"></div>
         </nav>
@@ -54,7 +54,7 @@
         <!-- <img src="img/peacock.png" alt="" class="peacock--logo"> -->
     </header>
 
-    <section class="product">
+    <section class="product" id="product">
         <div class="product--center">
             <h2 class="product--center__heading">OUR TEES</h2>
             <div class="product--center__showroom">
@@ -62,11 +62,11 @@
                 <img src="img/teeback.png" alt="t-shirt" class="tee n2">
                 <img src="img/teeside.png" alt="t-shirt" class="tee n3">
             </div>
-            <button class="btn btn-shopnow">GO TO SHOP</button>
+            <button class="btn btn-shopnow" ontouchend="this.onclick=fix">GO TO SHOP</button>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about--center">
             <h2 class="about--center__heading">ABOUT US</h2>
             <p class="about--center__par">
@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <section class="meet">
+    <section class="meet" id="team">
         <div class="meet--center">
             <div class="meet--center__heading">MEET THE TEAM</div>
             <div class="meet--center__team">
@@ -108,15 +108,33 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer--center">
             <div class="logo"><img src="img/triangle.png" alt="logo"></div>    
             <div class="socials">
-                <a href="https://www.instagram.com/diverz.clothing/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/diverz.clothing/" ontouchend="this.onclick=fix"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" ontouchend="this.onclick=fix"><i class="fab fa-facebook-square"></i></a>
             </div>
             <p>Diverz, 2018, All rights reserved</p>
         </div>
     </footer>
+    <script>
+        const my_list = document.querySelectorAll('.navigation__list > *');
+        const c_box = document.querySelector('.navigation--checkbox');
+        my_list.forEach(el => {
+            el.addEventListener('click', function(){
+                c_box.checked = false;
+            });
+        });
+
+        function fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+    </script>
 </body>
 </html>
