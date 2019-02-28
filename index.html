@@ -36,10 +36,10 @@
 
         <div class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#home" class="navigation__link" ontouchend="this.onclick=fix">HOME</a></li>
-                <li class="navigation__item"><a href="#product" class="navigation__link" ontouchend="this.onclick=fix">PRODUCT</a></li>
-                <li class="navigation__item"><a href="#about" class="navigation__link" ontouchend="this.onclick=fix">ABOUT</a></li>
-                <li class="navigation__item"><a href="#team" class="navigation__link" ontouchend="this.onclick=fix">TEAM</a></li>
+                <li class="navigation__item"><a href="#home" class="navigation__link">HOME</a></li>
+                <li class="navigation__item"><a href="#product" class="navigation__link">PRODUCT</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">ABOUT</a></li>
+                <li class="navigation__item"><a href="#team" class="navigation__link">TEAM</a></li>
             </ul>
         </div>
     </div>
@@ -62,7 +62,7 @@
                 <img src="img/teeback.png" alt="t-shirt" class="tee n2">
                 <img src="img/teeside.png" alt="t-shirt" class="tee n3">
             </div>
-            <button class="btn btn-shopnow" ontouchend="this.onclick=fix">GO TO SHOP</button>
+            <button class="btn btn-shopnow">GO TO SHOP</button>
         </div>
     </section>
 
@@ -112,8 +112,8 @@
         <div class="footer--center">
             <div class="logo"><img src="img/triangle.png" alt="logo"></div>    
             <div class="socials">
-                <a href="https://www.instagram.com/diverz.clothing/" ontouchend="this.onclick=fix"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/" ontouchend="this.onclick=fix"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/diverz.clothing/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
             </div>
             <p>Diverz, 2018, All rights reserved</p>
         </div>
@@ -126,15 +126,6 @@
                 c_box.checked = false;
             });
         });
-
-        function fix()
-        {
-            var el = this;
-            var par = el.parentNode;
-            var next = el.nextSibling;
-            par.removeChild(el);
-            setTimeout(function() {par.insertBefore(el, next);}, 0)
-        }
     </script>
 </body>
 </html>
