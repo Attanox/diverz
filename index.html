@@ -29,7 +29,7 @@
 <body>
     <div class="navigation">
         <input type="checkbox" class="navigation--checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation--button" ontouchend="this.onclick=fix">
+        <label for="navi-toggle" class="navigation--button">
             <span class="navigation--icon">&nbsp;</span>
         </label>
         <div class="navigation--background">&nbsp;</div>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="meet--center__team__members">
                     <img src="img/member.png" alt="member">
-                    <h4>Atta</h4>
+                    <h4>Andy</h4>
                     <h5>Design and IT</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi laudantium, iure sapiente incidunt optio doloribus impedit.</p>
@@ -123,7 +123,7 @@
         const c_box = document.querySelector('.navigation--checkbox');
         my_list.forEach(el => {
             el.addEventListener('click', function(){
-                c_box.checked = false;
+                setTimeout( function(){c_box.checked = false;}, 600);
             });
         });
     </script>

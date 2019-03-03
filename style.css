@@ -214,7 +214,8 @@ body {
   right: 3.5rem;
   background-image: radial-gradient(#8a8a8a, #636363);
   z-index: 1000;
-  transition: all 0.8s cubic-bezier(0.66, -0.28, 0.45, 1.48); }
+  transition: all .8s ease-in-out;
+  transition-delay: 0.5s; }
 
 .navigation__nav {
   height: 100vh;
@@ -259,6 +260,7 @@ body {
   transform: scale(70); }
 
 .navigation--checkbox:checked ~ .navigation__nav {
+  transition-delay: 0.75s;
   opacity: 1;
   width: 100%; }
 
