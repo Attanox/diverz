@@ -257,7 +257,8 @@ body {
   outline: none; }
 
 .navigation--checkbox:checked ~ .navigation--background {
-  transform: scale(70); }
+  transform: translate3d(0px, 0px, 0px) scale(70);
+  -webkit-transform: translate3d(0px, 0px, 0px) scale(70); }
 
 .navigation--checkbox:checked ~ .navigation__nav {
   transition-delay: 0.75s;
