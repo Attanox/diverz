@@ -58,9 +58,13 @@
         <div class="product--center">
             <h2 class="product--center__heading">OUR TEES</h2>
             <div class="product--center__showroom">
-                <img src="img/teefront.png" alt="t-shirt" class="tee n1">
-                <img src="img/teeback.png" alt="t-shirt" class="tee n2">
-                <img src="img/teeside.png" alt="t-shirt" class="tee n3">
+                <div id="prev"><i class="fas fa-arrow-circle-left"></i></div>
+                <div class="main">
+                    <img src="img/teeback.png" alt="t-shirt" class="tee n1">
+                    <img src="img/teefront.png" alt="t-shirt" class="tee n2">
+                    <img src="img/teeside.png" alt="t-shirt" class="tee n3">
+                </div>
+                <div id="next"><i class="fas fa-arrow-circle-right"></i></div>
             </div>
             <button class="btn btn-shopnow">GO TO SHOP</button>
         </div>
@@ -85,21 +89,21 @@
             <div class="meet--center__team">
                 <div class="meet--center__team__members">
                     <img src="img/member.png" alt="member">
-                    <h4>Marco</h4>
+                    <h4>Founder</h4>
                     <h5>Managment</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi laudantium, iure sapiente incidunt optio doloribus impedit.</p>
                 </div>
                 <div class="meet--center__team__members">
                     <img src="img/member.png" alt="member">
-                    <h4>Rišo</h4>
+                    <h4>Founder</h4>
                     <h5>Social media</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi laudantium, iure sapiente incidunt optio doloribus impedit.</p>
                 </div>
                 <div class="meet--center__team__members">
                     <img src="img/member.png" alt="member">
-                    <h4>Andy</h4>
+                    <h4>Founder</h4>
                     <h5>Design and IT</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi laudantium, iure sapiente incidunt optio doloribus impedit.</p>
@@ -112,7 +116,7 @@
         <div class="footer--center">
             <div class="logo"><img src="img/triangle.png" alt="logo"></div>    
             <div class="socials">
-                <a href="https://www.instagram.com/diverz.clothing/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
             </div>
             <p>Diverz, 2018, All rights reserved</p>
@@ -126,6 +130,62 @@
                 setTimeout( function(){c_box.checked = false;}, 600);
             });
         });
+        let flag=0;
+        document.querySelector('#next').addEventListener("click", function(){
+            if (flag === 0) {
+                document.querySelector('.n1').style.transform = "scale(1.2) translateX(80%)";
+                document.querySelector('.n1').style.zIndex =  "999";
+                document.querySelector('.n2').style.transform = "scale(0.9) translateX(100%)";
+                document.querySelector('.n2').style.zIndex =  "9";
+                document.querySelector('.n3').style.transform = "scale(0.9) translateX(-200%)";
+                document.querySelector('.n3').style.zIndex =  "9";
+                flag=1;
+            } else if (flag === 1) {
+                document.querySelector('.n1').style.transform = "scale(0.9) translateX(200%)";
+                document.querySelector('.n1').style.zIndex =  "9";
+                document.querySelector('.n2').style.transform = "scale(0.9) translateX(-100%)";
+                document.querySelector('.n2').style.zIndex =  "9";
+                document.querySelector('.n3').style.transform = "scale(1.2) translateX(-80%)";
+                document.querySelector('.n3').style.zIndex =  "999";
+                flag=2;
+            } else if (flag === 2) {
+                document.querySelector('.n1').style.transform = "scale(0.9) translateX(0)";
+                document.querySelector('.n1').style.zIndex =  "9";
+                document.querySelector('.n2').style.transform = "scale(1.2) translateX(0)";
+                document.querySelector('.n2').style.zIndex =  "999";
+                document.querySelector('.n3').style.transform = "scale(0.9) translateX(0)";
+                document.querySelector('.n3').style.zIndex =  "9";
+                flag=0;
+            }
+        });
+        document.querySelector('#prev').addEventListener("click", function(){
+            if (flag === 0) {
+                document.querySelector('.n1').style.transform = "scale(0.9) translateX(200%)";
+                document.querySelector('.n1').style.zIndex =  "9";
+                document.querySelector('.n2').style.transform = "scale(0.9) translateX(-100%)";
+                document.querySelector('.n2').style.zIndex =  "9";
+                document.querySelector('.n3').style.transform = "scale(1.2) translateX(-80%)";
+                document.querySelector('.n3').style.zIndex =  "999";
+                flag=1;
+            } else if (flag === 1) {
+                document.querySelector('.n1').style.transform = "scale(1.2) translateX(80%)";
+                document.querySelector('.n1').style.zIndex =  "999";
+                document.querySelector('.n2').style.transform = "scale(0.9) translateX(100%)";
+                document.querySelector('.n2').style.zIndex =  "9";
+                document.querySelector('.n3').style.transform = "scale(0.9) translateX(-200%)";
+                document.querySelector('.n3').style.zIndex =  "9";
+                flag=2;
+            } else if (flag === 2) {
+                document.querySelector('.n1').style.transform = "scale(0.9) translateX(0)";
+                document.querySelector('.n1').style.zIndex =  "9";
+                document.querySelector('.n2').style.transform = "scale(1.2) translateX(0)";
+                document.querySelector('.n2').style.zIndex =  "999";
+                document.querySelector('.n3').style.transform = "scale(0.9) translateX(0)";
+                document.querySelector('.n3').style.zIndex =  "9";
+                flag=0;
+            }
+        });
+        
     </script>
 </body>
 </html>
