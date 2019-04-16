@@ -11,7 +11,8 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
-  font-weight: 400; }
+  font-weight: 400;
+  overflow-x: hidden; }
 
 ::selection {
   background-color: #27FFA9;
@@ -343,7 +344,10 @@ body {
         font-size: 3rem;
         cursor: pointer;
         color: #333;
-        text-align: center; }
+        text-align: center;
+        z-index: 7000; }
+        .product--center__showroom #prev > *, .product--center__showroom #next > * {
+          cursor: pointer; }
       .product--center__showroom #prev:hover, .product--center__showroom #next:hover {
         color: black; }
       .product--center__showroom #prev {
@@ -352,7 +356,8 @@ body {
         right: 0; }
       .product--center__showroom .main {
         width: 80%;
-        margin: 0 auto 3rem auto; }
+        margin: 0 auto 3rem auto;
+        transform: translateX(1rem); }
         .product--center__showroom .main > * {
           position: relative;
           float: left;
@@ -380,8 +385,30 @@ body {
     margin-bottom: 2rem; } }
 
 @media screen and (max-width: 480px) {
+  .product {
+    padding: 1rem 0; }
   .product--center__heading {
-    font-size: 1.7rem; } }
+    font-size: 1.7rem; }
+  .product--center__showroom {
+    width: 100%; }
+    .product--center__showroom .main {
+      width: 200%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); }
+    .product--center__showroom #prev, .product--center__showroom #next {
+      background-color: #333;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%; }
+      .product--center__showroom #prev > i, .product--center__showroom #next > i {
+        display: block;
+        position: relative;
+        top: 1rem;
+        left: 0.1rem;
+        color: #fff; }
+    .product--center__showroom #next {
+      right: 0.75rem; } }
 
 .meet {
   width: 100%;
