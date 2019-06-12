@@ -61,7 +61,9 @@
                 <div id="prev"><i class="fas fa-arrow-circle-left"></i></div>
                 <div class="main">
                     <img src="img/teeback.png" alt="t-shirt" class="tee n1">
+
                     <img src="img/teefront.png" alt="t-shirt" class="tee n2">
+                    
                     <img src="img/teeside.png" alt="t-shirt" class="tee n3">
                 </div>
                 <div id="next"><i class="fas fa-arrow-circle-right"></i></div>
@@ -122,70 +124,6 @@
             <p>Diverz, 2018, All rights reserved</p>
         </div>
     </footer>
-    <script>
-        const my_list = document.querySelectorAll('.navigation__list > *');
-        const c_box = document.querySelector('.navigation--checkbox');
-        my_list.forEach(el => {
-            el.addEventListener('click', function(){
-                setTimeout( function(){c_box.checked = false;}, 600);
-            });
-        });
-        let flag=0;
-        document.querySelector('#next').addEventListener("click", function(){
-            if (flag === 0) {
-                document.querySelector('.n1').style.transform = "scale(1.2) translateX(80%)";
-                document.querySelector('.n1').style.zIndex =  "999";
-                document.querySelector('.n2').style.transform = "scale(0.9) translateX(100%)";
-                document.querySelector('.n2').style.zIndex =  "9";
-                document.querySelector('.n3').style.transform = "scale(0.9) translateX(-200%)";
-                document.querySelector('.n3').style.zIndex =  "9";
-                flag=1;
-            } else if (flag === 1) {
-                document.querySelector('.n1').style.transform = "scale(0.9) translateX(200%)";
-                document.querySelector('.n1').style.zIndex =  "9";
-                document.querySelector('.n2').style.transform = "scale(0.9) translateX(-100%)";
-                document.querySelector('.n2').style.zIndex =  "9";
-                document.querySelector('.n3').style.transform = "scale(1.2) translateX(-80%)";
-                document.querySelector('.n3').style.zIndex =  "999";
-                flag=2;
-            } else if (flag === 2) {
-                document.querySelector('.n1').style.transform = "scale(0.9) translateX(0)";
-                document.querySelector('.n1').style.zIndex =  "9";
-                document.querySelector('.n2').style.transform = "scale(1.2) translateX(0)";
-                document.querySelector('.n2').style.zIndex =  "999";
-                document.querySelector('.n3').style.transform = "scale(0.9) translateX(0)";
-                document.querySelector('.n3').style.zIndex =  "9";
-                flag=0;
-            }
-        });
-        document.querySelector('#prev').addEventListener("click", function(){
-            if (flag === 0) {
-                document.querySelector('.n1').style.transform = "scale(0.9) translateX(200%)";
-                document.querySelector('.n1').style.zIndex =  "9";
-                document.querySelector('.n2').style.transform = "scale(0.9) translateX(-100%)";
-                document.querySelector('.n2').style.zIndex =  "9";
-                document.querySelector('.n3').style.transform = "scale(1.2) translateX(-80%)";
-                document.querySelector('.n3').style.zIndex =  "999";
-                flag=1;
-            } else if (flag === 1) {
-                document.querySelector('.n1').style.transform = "scale(1.2) translateX(80%)";
-                document.querySelector('.n1').style.zIndex =  "999";
-                document.querySelector('.n2').style.transform = "scale(0.9) translateX(100%)";
-                document.querySelector('.n2').style.zIndex =  "9";
-                document.querySelector('.n3').style.transform = "scale(0.9) translateX(-200%)";
-                document.querySelector('.n3').style.zIndex =  "9";
-                flag=2;
-            } else if (flag === 2) {
-                document.querySelector('.n1').style.transform = "scale(0.9) translateX(0)";
-                document.querySelector('.n1').style.zIndex =  "9";
-                document.querySelector('.n2').style.transform = "scale(1.2) translateX(0)";
-                document.querySelector('.n2').style.zIndex =  "999";
-                document.querySelector('.n3').style.transform = "scale(0.9) translateX(0)";
-                document.querySelector('.n3').style.zIndex =  "9";
-                flag=0;
-            }
-        });
-        
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
